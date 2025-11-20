@@ -155,7 +155,7 @@ export interface FooterSection {
 export interface SocialLink {
   platform: string;
   url: string;
-  icon: string;
+  icon?: string;
 }
 
 export interface CardData {
