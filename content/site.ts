@@ -55,10 +55,10 @@ export const siteConfig = {
     ] as FooterSection[],
     copyright: `© ${new Date().getFullYear()} Chale Institute. All rights reserved.`,
     socialLinks: [
-      { platform: 'Facebook', url: 'https://facebook.com/chaleinstitute', icon: '📘' },
-      { platform: 'Twitter', url: 'https://twitter.com/chaleinstitute', icon: '🐦' },
-      { platform: 'LinkedIn', url: 'https://linkedin.com/company/chaleinstitute', icon: '💼' },
-      { platform: 'Instagram', url: 'https://instagram.com/chaleinstitute', icon: '📷' },
+      { platform: 'Facebook', url: 'https://facebook.com/chaleinstitute' },
+      { platform: 'Twitter', url: 'https://twitter.com/chaleinstitute' },
+      { platform: 'LinkedIn', url: 'https://linkedin.com/company/chaleinstitute' },
+      { platform: 'Instagram', url: 'https://instagram.com/chaleinstitute' },
     ] as SocialLink[],
   },
 };

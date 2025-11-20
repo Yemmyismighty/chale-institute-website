@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { FooterProps } from '@/types';
 import Container from './Container';
+import SocialIcon from '@/components/ui/SocialIcon';
 
 const Footer: React.FC<FooterProps> = ({ sections, copyright, socialLinks = [] }) => {
   return (
@@ -49,8 +50,7 @@ const Footer: React.FC<FooterProps> = ({ sections, copyright, socialLinks = [] }
                     className="text-gray-400 hover:text-white transition-colors duration-250 min-w-[44px] min-h-[44px] flex items-center justify-center"
                     aria-label={`Visit our ${social.platform} page`}
                   >
-                    {/* Icon placeholder - can be replaced with actual icon component */}
-                    <span className="text-2xl">{social.icon}</span>
+                    <SocialIcon platform={social.platform} className="w-6 h-6" />
                   </a>
                 ))}
               </div>
