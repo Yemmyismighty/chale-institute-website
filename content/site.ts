@@ -3,12 +3,12 @@ import { NavigationItem, FooterSection, SocialLink } from './types';
 export const siteConfig = {
   header: {
     logo: {
-      src: '/images/logo.svg',
+      src: '/images/chale-1.png',
       alt: 'Chale Institute',
     },
     navigation: [
-      { label: 'Programs', href: '#programs' },
-      { label: 'About', href: '#about' },
+      { label: 'Programs', href: '/programs' },
+      { label: 'About', href: '/about' },
       { label: 'Research', href: '/research' },
       { label: 'Admissions', href: '/admissions' },
       { label: 'Contact', href: '/contact' },
