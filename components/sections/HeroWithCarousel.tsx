@@ -110,7 +110,7 @@ const HeroWithCarousel: React.FC<HeroWithCarouselProps> = ({
                 {/* Quote on Left */}
                 <div className="flex-1 pr-0 md:pr-8">
                   <p className="text-white md:text-lg lg:text-xl leading-relaxed italic drop-shadow-lg">
-                    "{currentItem.quote}"
+                    &quot;{currentItem.quote}&quot;
                   </p>
                 </div>
 
