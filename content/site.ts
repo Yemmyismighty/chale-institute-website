@@ -53,7 +53,7 @@ export const siteConfig = {
         ],
       },
     ] as FooterSection[],
-    copyright: `© ${new Date().getFullYear()} Chale Institute. All rights reserved.`,
+    copyright: `© ${new Date().getFullYear()} TCHALEI Foundation. All rights reserved.`,
     socialLinks: [
       { platform: 'Facebook', url: 'https://facebook.com/chaleinstitute' },
       { platform: 'Twitter', url: 'https://twitter.com/chaleinstitute' },

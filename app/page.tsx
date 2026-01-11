@@ -1,23 +1,26 @@
-import Hero from '@/components/sections/Hero';
+import HeroWithCarousel from '@/components/sections/HeroWithCarousel';
 import ContentGrid from '@/components/sections/ContentGrid';
 import TextBlock from '@/components/sections/TextBlock';
 import CallToAction from '@/components/sections/CallToAction';
 import ProjectShowcase from '@/components/sections/ProjectShowcase';
 import PublicationGrid from '@/components/sections/PublicationGrid';
 import FeaturedPublication from '@/components/sections/FeaturedPublication';
+import ReadingShowcase from '@/components/sections/ReadingShowcase';
 import { homeContent } from '@/content/home';
-import { SectionData, GridData, TextData, CTAData, ProjectsData, PublicationsData, FeaturedPublicationData } from '@/content/types';
+import { SectionData, GridData, TextData, CTAData, ProjectsData, PublicationsData, FeaturedPublicationData, ReadingsData } from '@/content/types';
 
 export default function Home() {
-  const { hero, sections } = homeContent;
+  const { hero, sections, carouselItems = [] } = homeContent;
 
   return (
     <main className="min-h-screen bg-light-bg dark:bg-dark-bg text-light-text dark:text-white transition-colors duration-300" id="main-content">
-      {/* Hero Section */}
-      <Hero
+      {/* Hero Section with Carousel */}
+      <HeroWithCarousel
         title={hero.title}
         subtitle={hero.subtitle}
         backgroundImage={hero.backgroundImage}
+        carouselItems={carouselItems}
+        carouselFrameImage="/images/Frame 76.png"
         cta={hero.cta ? {
           label: hero.cta.primaryButton.label,
           href: hero.cta.primaryButton.href,
@@ -119,6 +122,18 @@ export default function Home() {
                 description={featuredPubData.description}
                 backgroundImage={featuredPubData.backgroundImage}
                 downloadUrl={featuredPubData.downloadUrl}
+              />
+            );
+          }
+
+          case 'readings': {
+            const readingsData = section.data as ReadingsData;
+            return (
+              <ReadingShowcase
+                key={section.id}
+                title={section.title}
+                description={section.description}
+                readings={readingsData.readings}
               />
             );
           }

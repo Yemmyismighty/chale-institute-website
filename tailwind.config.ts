@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        '1215': '1215px',
+      },
       // Custom color palette - Elegant Academic Institute Theme
       colors: {
         // Primary: Warm Gold/Bronze - Excellence, prestige, warmth

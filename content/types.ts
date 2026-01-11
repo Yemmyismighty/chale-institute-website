@@ -3,6 +3,15 @@ export interface PageContent {
   metadata: PageMetadata;
   hero: HeroData;
   sections: SectionData[];
+  carouselItems?: CarouselItem[];
+}
+
+export interface CarouselItem {
+  id: string;
+  image: string;
+  title: string;
+  quote: string;
+  attribution: string;
 }
 
 export interface PageMetadata {
@@ -21,10 +30,10 @@ export interface HeroData {
 
 export interface SectionData {
   id: string;
-  type: 'grid' | 'text' | 'cta' | 'projects' | 'publications' | 'featured-publication';
+  type: 'grid' | 'text' | 'cta' | 'projects' | 'publications' | 'featured-publication' | 'readings';
   title?: string;
   description?: string;
-  data: GridData | TextData | CTAData | ProjectsData | PublicationsData | FeaturedPublicationData;
+  data: GridData | TextData | CTAData | ProjectsData | PublicationsData | FeaturedPublicationData | ReadingsData;
 }
 
 export interface GridData {
@@ -122,4 +131,17 @@ export interface FeaturedPublicationData {
   description: string;
   backgroundImage: string;
   downloadUrl: string;
+}
+
+export interface ReadingsData {
+  readings: ReadingItem[];
+}
+
+export interface ReadingItem {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  downloadUrl: string;
+  category?: string;
 }
